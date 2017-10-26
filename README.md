@@ -56,7 +56,7 @@ Documentation
 
 * Additional documentation in the [docs folder](docs).
 
-How to run regress mode
+How to run as regress mode
 -------------
 
 my .bitcoin.conf
@@ -69,11 +69,13 @@ rpcuser=bitcoinrpc
 rpcpassword=bitcoinrpc
 ```
 
+run cotainer
 ```
 docker run -v bitcoind-data:/bitcoin --name=bitcoind-node -d -p 8333:8333 -p 127.0.0.1:8332:8332 -v /home/energybc/.bitcoin.conf:/bitcoin/.bitcoin/bitcoin.conf kylemanna/bitcoind -regnet
 ```
 
+test json-rpc
 ```
-docker exec -it bitcoind-node bitcoin-cli -regtest generate 10
+docker exec -it bitcoind-node bitcoin-cli -regtest generate 101
 ```
 
